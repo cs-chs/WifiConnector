@@ -603,7 +603,7 @@ public class WifiConnector {
     }
 
     public boolean isConnectedToBSSID(String BSSID) {
-        if (wifiManager.getConnectionInfo().getBSSID() != null &&
+        if (BSSID != null && wifiManager.getConnectionInfo().getBSSID() != null &&
                 wifiManager.getConnectionInfo().getBSSID().equals(BSSID)) {
             wifiLog("Already connected to: " + wifiManager.getConnectionInfo().getSSID() +
                     "  BSSID: " + wifiManager.getConnectionInfo().getBSSID() + "  " + BSSID);
